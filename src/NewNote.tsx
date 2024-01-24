@@ -1,6 +1,5 @@
-import React from "react";
-import NoteForm from "./NoteForm";
 import { NoteData, Tag } from "./App";
+import { NoteForm } from "./NoteForm";
 
 type NewNoteProps = {
   onSubmit: (data: NoteData) => void;
@@ -8,10 +7,10 @@ type NewNoteProps = {
   availableTags: Tag[];
 };
 
-function NewNote({ onSubmit, onAddTag, availableTags }: NewNoteProps) {
+export function NewNote({ onSubmit, onAddTag, availableTags }: NewNoteProps) {
   return (
     <>
-      <h1>NewNote</h1>
+      <h1 className="mb-4">New Note</h1>
       <NoteForm
         onSubmit={onSubmit}
         onAddTag={onAddTag}
@@ -20,5 +19,3 @@ function NewNote({ onSubmit, onAddTag, availableTags }: NewNoteProps) {
     </>
   );
 }
-
-export default NewNote;
